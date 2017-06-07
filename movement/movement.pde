@@ -4,9 +4,9 @@ float MAX_VELOCITY = 10;
 
 float bgColor = 255;
 
-float gravity = 0.25;
+float gravity = 0.2;
 float ballX, ballY;
-float ballVx = 0, ballVy = 0;
+float ballVx = 1, ballVy = 1;
 float ballRadius = 10;
 color ballColor = color(100, 180, 70, 150);
 
@@ -21,8 +21,8 @@ void setup() {
   size(displayWidth, displayHeight);
   ballX=displayWidth/2;
   ballY=displayHeight/2;
-  ballVx = 0;
-  ballVy = 0;
+  ballVx = 1;
+  ballVy = 1;
 }
 
 void draw() {

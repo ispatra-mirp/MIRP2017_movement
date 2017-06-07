@@ -10,9 +10,22 @@ void updateBallPosition() {
 
 void resolveCollisions() {
   // Resolving Collisions with floor (bottom wall).
-  if (ballY > displayHeight-ballRadius){
-    ballY = displayHeight-ballRadius;
-    ballVy *= -restitutionCoeff;
+  if (ballX > displayWidth-ballRadius){
+    ballX = displayWidth-ballRadius;
+    ballVx *= -restitutionCoeff;
   }
-  // Resolve Collisions with all other walls.
+  if (ballX <ballRadius){
+    ballX = ballRadius;
+    ballVx *= -restitutionCoeff;
+  }
+ if (ballY <ballRadius){
+  ballY = ballRadius;
+  ballVy *= -restitutionCoeff;
 }
+if (ballY >displayHeight-ballRadius){
+  ballY = displayHeight-ballRadius;
+  ballVy *= -restitutionCoeff;
+}
+}
+
+ 

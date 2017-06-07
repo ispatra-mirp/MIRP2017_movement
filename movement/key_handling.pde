@@ -18,4 +18,6 @@ void detectKeys() {
     ballRadius = ballRadius - radiusIncrement;
   if (right) 
     ballRadius=ballRadius + radiusIncrement;
+  if(up)
+    ballVy-=1;
 }
